@@ -1,0 +1,255 @@
+﻿<Window x:Class="JJ_ArCondicionado_Jailton.Agendamentos"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:JJ_ArCondicionado_Jailton"
+        mc:Ignorable="d"
+        Title="Agendamentos" Height="654.6" Width="1325" WindowStartupLocation="CenterScreen" WindowStyle="None">
+    <Grid MouseDown="Grid_MouseDown">
+        <Canvas HorizontalAlignment="Center" Height="120" VerticalAlignment="Top" Width="1325" MouseDown="Canvas_MouseDown">
+            <Canvas.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0" Opacity="0.9">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FF023D54" Offset="1"/>
+                </LinearGradientBrush>
+            </Canvas.Background>
+            <Ellipse Height="213" Width="225" Stretch="Uniform" VerticalAlignment="Top" HorizontalAlignment="Left" RenderTransformOrigin="0.465,0.575" Canvas.Top="5" MouseDown="Ellipse_MouseDown">
+                <Ellipse.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform AngleY="-1.316"/>
+                        <RotateTransform/>
+                        <TranslateTransform Y="-2.769"/>
+                    </TransformGroup>
+                </Ellipse.RenderTransform>
+                <Ellipse.Fill>
+                    <ImageBrush ImageSource="/Logotipo Monograma Minimalista Cinza e Preto.png" Opacity="1" TileMode="None">
+                        <ImageBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterY="5" CenterX="5"/>
+                                <SkewTransform AngleY="1" CenterX="5" CenterY="5" AngleX="0"/>
+                                <RotateTransform CenterX="5" CenterY="5"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </ImageBrush.RelativeTransform>
+                    </ImageBrush>
+                </Ellipse.Fill>
+            </Ellipse>
+        </Canvas>
+        <Label Content="Painel De Agendamentos" HorizontalAlignment="Left" Height="60" Margin="490,50,0,0" VerticalAlignment="Top" Width="360" FontSize="18" Background="{x:Null}" Foreground="White" FontWeight="Bold" HorizontalContentAlignment="Center"/>
+        <TextBox x:Name="TxtMunicipio" HorizontalAlignment="Left" Margin="975,270,0,0" VerticalAlignment="Top" Width="270" Height="34" FontSize="14" TextChanged="TxtMunicipio_TextChanged" AutomationProperties.Name="TxtMunicipio">
+            <TextBox.Template>
+                <ControlTemplate TargetType="{x:Type TextBox}">
+                    <Border BorderThickness="2" CornerRadius="10" BorderBrush="Black">
+                        <ScrollViewer x:Name="PART_ContentHost"/>
+                    </Border>
+                </ControlTemplate>
+            </TextBox.Template>
+        </TextBox>
+        <TextBox x:Name="TxtTipoServico" HorizontalAlignment="Left" Margin="980,365,0,0" VerticalAlignment="Top" Width="260" Height="34" FontSize="14" TextChanged="TxtTipoServico_TextChanged" AutomationProperties.Name="TxtTipoServico" RenderTransformOrigin="0.511,0.588">
+            <TextBox.Template>
+                <ControlTemplate TargetType="{x:Type TextBox}">
+                    <Border BorderThickness="2" CornerRadius="10" BorderBrush="Black">
+                        <ScrollViewer x:Name="PART_ContentHost"/>
+                    </Border>
+                </ControlTemplate>
+            </TextBox.Template>
+        </TextBox>
+        <TextBox x:Name="TxtAgendamento" HorizontalAlignment="Center" Margin="0,458,0,0" VerticalAlignment="Top" Width="202" Height="34" FontSize="14" TextChanged="TxtAgendamento_TextChanged" AutomationProperties.Name="TxtAgendamento">
+            <TextBox.Template>
+                <ControlTemplate TargetType="{x:Type TextBox}">
+                    <Border BorderThickness="2" CornerRadius="10" BorderBrush="Black">
+                        <ScrollViewer x:Name="PART_ContentHost"/>
+                    </Border>
+                </ControlTemplate>
+            </TextBox.Template>
+        </TextBox>
+
+        <TextBox x:Name="TxtEmail" HorizontalAlignment="Left" Margin="854,460,0,0" VerticalAlignment="Top" Width="270" Height="34" FontSize="14" TextChanged="TxtEmail_TextChanged" AutomationProperties.Name="TxtEmail">
+            <TextBox.Template>
+                <ControlTemplate TargetType="{x:Type TextBox}">
+                    <Border BorderThickness="2" CornerRadius="10" BorderBrush="Black">
+                        <ScrollViewer x:Name="PART_ContentHost"/>
+                    </Border>
+                </ControlTemplate>
+            </TextBox.Template>
+        </TextBox>
+
+
+        <TextBox x:Name="TxtContato" HorizontalAlignment="Left" Margin="135,460,0,0" VerticalAlignment="Top" Width="199" Height="34" FontSize="14" TextChanged="TxtContato_TextChanged" AutomationProperties.Name="TxtContato">
+            <TextBox.Template>
+                <ControlTemplate TargetType="{x:Type TextBox}">
+                    <Border BorderThickness="2" CornerRadius="10" BorderBrush="Black">
+                        <ScrollViewer x:Name="PART_ContentHost"/>
+                    </Border>
+                </ControlTemplate>
+            </TextBox.Template>
+        </TextBox>
+        <TextBox x:Name="TxtCep" HorizontalAlignment="Left" Margin="565,370,0,0" VerticalAlignment="Top" Width="240" Height="34" FontSize="14" TextChanged="TxtCep_TextChanged" AutomationProperties.Name="TxtCep" RenderTransformOrigin="0.492,0.706">
+            <TextBox.Template>
+                <ControlTemplate TargetType="{x:Type TextBox}">
+                    <Border BorderThickness="2" CornerRadius="10" BorderBrush="Black">
+                        <ScrollViewer x:Name="PART_ContentHost"/>
+                    </Border>
+                </ControlTemplate>
+            </TextBox.Template>
+        </TextBox>
+        <TextBox x:Name="TxtEndereco" HorizontalAlignment="Left" Margin="130,370,0,0" VerticalAlignment="Top" Width="310" Height="34" FontSize="14" TextChanged="TxtEndereco_TextChanged" AutomationProperties.Name="TxtEndereco">
+            <TextBox.Template>
+                <ControlTemplate TargetType="{x:Type TextBox}">
+                    <Border BorderThickness="2" CornerRadius="10" BorderBrush="Black">
+                        <ScrollViewer x:Name="PART_ContentHost"/>
+                    </Border>
+                </ControlTemplate>
+            </TextBox.Template>
+        </TextBox>
+        <TextBox x:Name="txtNome" HorizontalAlignment="Left" Margin="440,271,0,0" VerticalAlignment="Top" Width="350" Height="34" FontSize="14" TextChanged="txtNome_TextChanged" AutomationProperties.Name="txtNome">
+            <TextBox.Template>
+                <ControlTemplate TargetType="{x:Type TextBox}">
+                    <Border BorderThickness="2" CornerRadius="10" BorderBrush="Black">
+                        <ScrollViewer x:Name="PART_ContentHost"/>
+                    </Border>
+                </ControlTemplate>
+            </TextBox.Template>
+        </TextBox>
+        <TextBox x:Name="txtCodigo" HorizontalAlignment="Left" Margin="130,275,0,0" VerticalAlignment="Top" Width="160" Height="34" FontSize="14" TextChanged="txtCodigo_TextChanged" AutomationProperties.Name="TxtCodigo">
+            <TextBox.Template>
+                <ControlTemplate TargetType="{x:Type TextBox}">
+                    <Border BorderThickness="2" CornerRadius="10" BorderBrush="Black">
+                        <ScrollViewer x:Name="PART_ContentHost"/>
+                    </Border>
+                </ControlTemplate>
+            </TextBox.Template>
+        </TextBox>
+        <Button x:Name="btnCadastrar" Content="Cadastrar"   VerticalAlignment="Top" Width="135" Height="30" Margin="400,575,0,0" FontSize="14" FontFamily="Arial" Background="#FFD02929" HorizontalAlignment="Left" RenderTransformOrigin="0.519,0.5" UseLayoutRounding="True" Click="btnCadastrar_Click"
+ HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="White" ClickMode="Press" Cursor="Hand">
+            <Button.BorderBrush>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.BorderBrush>
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border BorderThickness="2" CornerRadius="10" BorderBrush="#FF023D54">
+                        <Border.Background>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="White"/>
+                                <GradientStop Color="#FF023D54" Offset="1"/>
+                            </LinearGradientBrush>
+                        </Border.Background>
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button x:Name="btnDeletar" Content="Deletar Agendamento"   VerticalAlignment="Top" Width="235" Height="30" Margin="680,575,0,0" FontSize="14" FontFamily="Arial" Background="#FFD02929" HorizontalAlignment="Left" RenderTransformOrigin="0.519,0.5" UseLayoutRounding="True" Click="btnDeletar_Click"
+ HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="White" ClickMode="Press" Cursor="Hand">
+            <Button.BorderBrush>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.BorderBrush>
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border BorderThickness="2" CornerRadius="10" BorderBrush="#FF023D54">
+                        <Border.Background>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="White"/>
+                                <GradientStop Color="#FF023D54" Offset="1"/>
+                            </LinearGradientBrush>
+                        </Border.Background>
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button x:Name="btnLimpar" Content="Limpar"   VerticalAlignment="Top" Width="115" Height="34" Margin="1162,460,0,0" FontSize="14" FontFamily="Arial" Background="#FFD02929" HorizontalAlignment="Left" RenderTransformOrigin="0.531,0.543" UseLayoutRounding="True" Click="btnLimpar_Click"
+ HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="White" ClickMode="Press" Cursor="Hand" AutomationProperties.Name="btnLimpar">
+            <Button.BorderBrush>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.BorderBrush>
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border BorderThickness="2" CornerRadius="10" BorderBrush="#FF023D54">
+                        <Border.Background>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="White"/>
+                                <GradientStop Color="#FF023D54" Offset="1"/>
+                            </LinearGradientBrush>
+                        </Border.Background>
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button x:Name="btnVoltar" Content="Voltar"   VerticalAlignment="Top" Width="135" Height="30" Margin="100,575,0,0" FontSize="14" FontFamily="Arial" Background="#FFD02929" HorizontalAlignment="Left" RenderTransformOrigin="0.519,0.5" UseLayoutRounding="True" Click="btnVoltar_Click"
+ HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="White" ClickMode="Press" Cursor="Hand">
+            <Button.BorderBrush>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.BorderBrush>
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border BorderThickness="2" CornerRadius="10" BorderBrush="#FF023D54">
+                        <Border.Background>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="White"/>
+                                <GradientStop Color="#FF023D54" Offset="1"/>
+                            </LinearGradientBrush>
+                        </Border.Background>
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button x:Name="btnAtualizar" Content="Atualizar"   VerticalAlignment="Top" Width="135" Height="30" Margin="1020,575,0,0" FontSize="14" FontFamily="Arial" Background="#FFD02929" HorizontalAlignment="Left" RenderTransformOrigin="0.519,0.5" UseLayoutRounding="True" Click="btnAtualizar_Click"
+HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="White" ClickMode="Press" Cursor="Hand">
+            <Button.BorderBrush>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.BorderBrush>
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border BorderThickness="2" CornerRadius="10" BorderBrush="#FF023D54">
+                        <Border.Background>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="White"/>
+                                <GradientStop Color="#FF023D54" Offset="1"/>
+                            </LinearGradientBrush>
+                        </Border.Background>
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Label Content="Codigo" HorizontalAlignment="Left" Margin="44,275,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <Label Content="Cliente" HorizontalAlignment="Left" Height="30" Margin="330,275,0,0" VerticalAlignment="Top" Width="85" FontSize="16"/>
+        <Label Content="Municipio" HorizontalAlignment="Left" Height="30" Margin="840,270,0,0" VerticalAlignment="Top" Width="130" FontSize="16"/>
+        <Label Content="Endereço" HorizontalAlignment="Left" Height="35" Margin="35,370,0,0" VerticalAlignment="Top" Width="85" FontSize="16"/>
+        <Label Content="CEP" HorizontalAlignment="Left" Height="35" Margin="490,370,0,0" VerticalAlignment="Top" Width="70" FontSize="16"/>
+        <Label Content="Tipo De Serviço" HorizontalAlignment="Left" Height="35" Margin="840,370,0,0" VerticalAlignment="Top" Width="120" FontSize="16" RenderTransformOrigin="0.5,0.5">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.303"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <Label Content="Contato" HorizontalAlignment="Left" Height="50" Margin="40,460,0,0" VerticalAlignment="Top" Width="90" FontSize="16" RenderTransformOrigin="0.5,0.4"/>
+        <Label Content="Data Do Agendamento" HorizontalAlignment="Left" Height="40" Margin="372,458,0,0" VerticalAlignment="Top" Width="184" FontSize="16"/>
+        <Label Content="Email" HorizontalAlignment="Left" Height="32" Margin="786,460,0,0" VerticalAlignment="Top" Width="63" FontSize="16"/>
+
+    </Grid>
+</Window>
